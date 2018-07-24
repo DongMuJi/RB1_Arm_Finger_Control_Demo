@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(rb1_arm_finger_control)
+
+find_package(catkin REQUIRED COMPONENTS rospy actionlib kinova_msgs moveit_commander moveit_msgs geometry_msgs std_msgs)
+
+
+catkin_package()
+
+include_directories()

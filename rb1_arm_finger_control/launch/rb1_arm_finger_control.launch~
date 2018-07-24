@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+    
+  <arg name="robot_type" default="j2n6a300"/>
+  <arg name="finger_unit" default="percent"/>
+  <arg name="arm_unit" default="degree"/>
+  <arg name="finger_final_relative" default="False"/>
+  <arg name="arm_final_relative" default="True"/> 
+
+  <node pkg="rb1_arm_finger_control" type="arm_finger_action_client.py" respawn="false" name="rb1_arm_finger_control" output="screen">
+
+     <param name="robot_type" value="j2n6a300" type= "str"/>
+
+     <param name="finger_unit" value="percent" type= "str"/><!--turn or mm or percent-->
+     <param name="finger1_final_value" value="100" />
+     <param name="finger2_final_value" value="100" />
+     <param name="finger3_final_value" value="100" />
+     <param name="finger_final_relative" value="False" type= "bool"/>
+
+     <param name="arm_unit" value="degree" type= "str"/> <!--degree or radian-->
+     <param name="arm1_final_value" value="0" />
+     <param name="arm2_final_value" value="0" />
+     <param name="arm3_final_value" value="0" />
+     <param name="arm4_final_value" value="0" />
+     <param name="arm5_final_value" value="20" />
+     <param name="arm6_final_value" value="0" />
+     <param name="arm_final_relative" value="True" type= "bool"/>
+
+   </node> 
+</launch>
